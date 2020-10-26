@@ -80,13 +80,13 @@ public class DefaultTokenReader implements TokenReader {
         sb.append(r.current());
         while (r.hasMore()) {
             final char c = nextChar();
-            if (c != '.' && !isNumber(c)) {
-                final BigDecimal value = parseBigDecimal(sb.toString());
-                return TokenValue.number(value);
+            if ((c != '.' && !isNumber(c))) {
+                break;
             }
             sb.append(c);
         }
-        throw makeEndOfFileException();
+        final BigDecimal value = parseBigDecimal(sb.toString());
+        return TokenValue.number(value);
     }
 
     private BigDecimal parseBigDecimal(String text) {

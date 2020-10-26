@@ -44,7 +44,11 @@ public class TokenValue {
 
     @SuppressWarnings("unchecked")
     public <T> T value(Class<T> clazz) {
-        return (T)type;
+        return (T)value();
+    }
+
+    public Object value() {
+        return value;
     }
 
     @Override
