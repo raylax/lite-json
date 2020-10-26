@@ -1,4 +1,4 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 import java.math.BigDecimal;
 
@@ -81,6 +81,7 @@ public class DefaultTokenReader implements TokenReader {
         while (r.hasMore()) {
             final char c = nextChar();
             if ((c != '.' && !isNumber(c))) {
+                backChar();
                 break;
             }
             sb.append(c);

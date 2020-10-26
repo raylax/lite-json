@@ -1,4 +1,4 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 /**
  * @author raylax

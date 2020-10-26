@@ -1,4 +1,4 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 /**
  * @author raylax
@@ -16,9 +16,9 @@ public class TokenValue {
     public static final TokenValue COMMA = new TokenValue(Token.COMMA);
     public static final TokenValue ED = new TokenValue(Token.ED);
 
-    private Token type;
+    private final Token type;
 
-    private Object value;
+    private final Object value;
 
 
     private TokenValue(Token type) {
@@ -49,11 +49,6 @@ public class TokenValue {
 
     public Object value() {
         return value;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("<%s> %s", type, value == null ? "" : value);
     }
 
 }

@@ -1,9 +1,9 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 /**
  * @author raylax
  */
-public class LiteJson {
+public class Json {
 
     public static JsonObject parseObject(String text) {
         return (JsonObject) parse(text);
@@ -13,7 +13,7 @@ public class LiteJson {
         return (JsonArray) parse(text);
     }
 
-    private static Object parse(String text) {
+    public static Object parse(String text) {
         return new JsonReader(text).parse();
     }
 

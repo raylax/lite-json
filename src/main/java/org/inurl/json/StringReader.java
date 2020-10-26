@@ -1,4 +1,4 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 
 /**
@@ -15,9 +15,6 @@ public class StringReader implements CharReader {
 
     @Override
     public char next() {
-        if (!hasMore()) {
-            return (char) -1;
-        }
         return chars[index++];
     }
 

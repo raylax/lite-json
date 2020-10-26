@@ -1,4 +1,4 @@
-package org.inurl.lite.json;
+package org.inurl.json;
 
 /**
  * Token类型
@@ -52,9 +52,5 @@ public enum Token {
      */
     ED,
     ;
-
-    public int mask() {
-        return 1 << ordinal();
-    }
 
 }
